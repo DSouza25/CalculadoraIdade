@@ -17,6 +17,8 @@ public class telaidade extends javax.swing.JFrame {
      */
     public telaidade() {
         initComponents();
+        lblImagem.setVisible(true);
+        lblFemale.setVisible(false);
     }
 
     /**
@@ -41,9 +43,10 @@ public class telaidade extends javax.swing.JFrame {
         btnCalcular = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         lblIdade = new javax.swing.JLabel();
-        lblImagem = new javax.swing.JLabel();
         cbSexo = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
+        lblImagem = new javax.swing.JLabel();
+        lblFemale = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -52,8 +55,11 @@ public class telaidade extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jsAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 88, 89, -1));
 
         lblAno.setText("Ano de nascimento:");
+        getContentPane().add(lblAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 91, -1, -1));
 
         btnCalcular.setText("Calcular");
         btnCalcular.addActionListener(new java.awt.event.ActionListener() {
@@ -61,17 +67,18 @@ public class telaidade extends javax.swing.JFrame {
                 btnCalcularActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 177, 115, 34));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Idade");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 219, 56, 28));
 
         lblIdade.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         lblIdade.setForeground(new java.awt.Color(255, 51, 0));
         lblIdade.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblIdade.setText("0");
-
-        lblImagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/masc.png"))); // NOI18N
+        getContentPane().add(lblIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 217, 55, -1));
 
         cbSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
         cbSexo.addActionListener(new java.awt.event.ActionListener() {
@@ -79,55 +86,16 @@ public class telaidade extends javax.swing.JFrame {
                 cbSexoActionPerformed(evt);
             }
         });
+        getContentPane().add(cbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 128, -1, -1));
 
         jLabel3.setText("Sexo:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 131, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(lblAno))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cbSexo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jsAno))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 250, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(88, 88, 88)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAno)
-                    .addComponent(jsAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(27, 27, 27)
-                .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblIdade))
-                .addGap(29, 29, 29))
-            .addComponent(lblImagem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
-        );
+        lblImagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/masc.png"))); // NOI18N
+        getContentPane().add(lblImagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 0, 250, 276));
+
+        lblFemale.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/female.png"))); // NOI18N
+        getContentPane().add(lblFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 230, 270));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -145,10 +113,12 @@ public class telaidade extends javax.swing.JFrame {
         String genero = cbSexo.getSelectedItem().toString();
         if (genero == "Feminino"){
           ImageIcon iconeF = new ImageIcon("Imagens/female.png");
-          lblImagem.setIcon(iconeF);
+          lblFemale.setVisible(true);
+          lblImagem.setVisible(false);
         } else {
             ImageIcon iconeM = new ImageIcon("..Imagens/masc.png");
-            lblImagem.setIcon(iconeM);
+            lblFemale.setVisible(false);
+            lblImagem.setVisible(true);
         }
         
     }//GEN-LAST:event_cbSexoActionPerformed
@@ -203,6 +173,7 @@ public class telaidade extends javax.swing.JFrame {
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JSpinner jsAno;
     private javax.swing.JLabel lblAno;
+    private javax.swing.JLabel lblFemale;
     private javax.swing.JLabel lblIdade;
     private javax.swing.JLabel lblImagem;
     // End of variables declaration//GEN-END:variables
